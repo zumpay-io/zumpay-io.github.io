@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136432704-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136432704-1');
+</script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="120x120" href="./ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./ico/favicon-16x16.png">
+    <link rel="manifest" href="./ico/site.webmanifest">
+    <link rel="mask-icon" href="./ico/safari-pinned-tab.svg" color="#00853d">
+    <link rel="shortcut icon" href="./ico/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00853d">
+    <meta name="msapplication-config" content="./ico/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="ZumPay">
+    <meta name="Description" content="ZumCoin payments processing for developers, by developers.">
+    <meta property="og:description" content="ZumCoin payments processing for developers, by developers.">
+    <meta property="og:image" content="https://zumpay.io/img/zumcoin_logo.png">
+    <meta name="Keywords" content="ZumCoin,ZumPay,blockchain,explorer,pools,hashrate,hash rate,mining,block explorer">
+    <title>ZumPay&trade;: Private Digital Crypto Payments</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body class="font-sans tracking-wide leading-normal">
+    <div class="container mx-auto">
+        <section id="navbar">
+            <div class="py-3 md:mb-3 mb-10">
+                 <div class="flex items-center flex-col text-lg md:text-sm md:text-base md:flex-row">
+                    <a href="/" "email me"> <img src="./img/zumpay_logo.png" class="h-12"/></a>
+                    <div class="ml-6">
+                        <ul class="list-reset flex flex-col md:flex-row items-center">
+                            <li class="md:ml-6 "><a href="https://zumpay.io" class="no-underline text-blue-dark"><i class="fas fa-home"></i>&nbsp; <span class=" md:inline">Home</span></a></li>
+                            <li class="md:ml-6 "><a href="https://zumpay.io/start.html" class="no-underline text-black"><i class="fas fa-play-circle"></i>&nbsp; <span class=" md:inline">Getting Started</span></a></li>
+                            <li class="md:ml-6 "><a href="https://docs.zumpay.io" class="no-underline text-black"><i class="fas fa-book"></i>&nbsp; <span class=" md:inline">Documentation</span></a></li>
+                            <li class="md:ml-6 "><a href="https://explorer.zumcoin.org" class="no-underline text-black"><i class="fas fa-dice-d6"></i>&nbsp; <span class=" md:inline">Block Explorer</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br><br><br>
+        <section id="title" class="mb-16">
+            <div class="flex justify-center">
+                <h1 class="font-normal text-5xl">Getting Started</h1>
+            </div>
+        </section>
+        <section id="content" class="mb-32 text-base">
+            <div class="flex justify-center mb-10 ">
+                <div class="w-5/6 md:w-3/5 ">
+                    <h1 class="font-normal text-center mb-6">To Submit A Payment Request</h1>
+                    <div class="w-full text-left">
+                        <p class="mb-4"> You will need to create a JSON object which consists of the following 3 items:</p>
+                        <ol>
+                            <li><strong>Amount: </strong>This is the amount you would like to receive.</li>
+                            <li><strong>Address: </strong> This is your wallet address where you would like to receive the payment.</li>
+                            <li><strong>Callback: </strong>  This is a callback function link to be executed upon payment submission.</li>
+
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <code class="mb-6 m-0 m-auto md:w-5/6 w-full">
+          {
+            "amount": 100000000,
+            "address": "Zum1yfQFeUajU77wyHMvBiMdiQdKgj9qfEc3oiEhHfizSu8wZ6K8ZoWQQY57qNmDC48yg6UAHzyTugB9tMohMnUEArSCdojkxH6",
+            "callback": "https://yourwebapp.com/process"
+          }
+          </code>
+            <div class="flex justify-center mb-16">
+                <div class="w-5/6 md:w-3/5 ">
+                    <p><strong>Note:</strong> <span class="italic">ZumCoin uses eight decimals places, so 1.00000000 ZUM becomes 100000000 in atomic units.</span></p>
+                </div>
+            </div>
+            <div class="flex justify-center mb-16">
+                <div class="w-5/6 md:w-3/5 border rounded-lg">
+                    <h1 class="font-normal text-center mb-6">Submit The Request To ZumPay™</h1>
+                    <div class="w-full text-left py-6 px-6">
+                        <p> Post the request to <a href="https://api.zumpay.io/v1/new" class="text-blue-dark">https://api.zumpay.io/v1/new</a> using your favorite programming language. A new wallet will be created (dedicated view and spend keys) just for your request.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-10">
+                <div class="w-5/6 md:w-3/5 ">
+                    <h1 class="font-normal text-center mb-6">Process the Response</h1>
+                    <div class="w-full text-center">
+                        <p> If all goes well, you'll receive back a response as such.</p>
+                    </div>
+                </div>
+            </div>
+            <code class="mb-6 m-0 m-auto md:w-5/6 w-full">
+
+          {
+            "sendToAddress": "Zum1yfbF5775QDCRdyK7V4CPvHSF5zkDuBe32Y6FLnKRJdqwp58P9ar3icXHnLPDEAKYaWmnBtmpWBUhPFVC6NFzPZmhb3UdWbE",
+            "atomicAmount": 100000000,
+            "amount": 1,
+            "userDefined": {},
+            "startHeight": 1109310,
+            "endHeight": 1109370,
+            "confirmations": 60,
+            "qrCode": "https://chart.googleapis.com/chart?cht=qr&chs=256x256&chl=zumcoin://Zum1yfbF5775QDCRdyK7V4CPvHSF5zkDuBe32Y6FLnKRJdqwp58P9ar3icXHnLPDEAKYaWmnBtmpWBUhPFVC6NFzPZmhb3UdWbE?amount=100000000"
+          }
+          </code>
+            <div class="flex justify-center mb-16">
+                <div class="w-5/6 md:w-3/5 ">
+                    <p class="mb-4">Display the <strong>sendToAddress</strong> to the user and prompt them to make payment to that address in the proper amount as requested.</p>
+
+                    <p class="mb-4"><strong>Note:</strong> The Payment requests are only valid for approximately 60 minutes (exactly 30 blocks). So if your user doesn't complete the payment within the time limit, the request is cancelled.</p>
+
+                    <p class="mb-4"> But if the user attempts to pay you after the expiration of the initial request, we will initiate a fresh request and wait for the user to submit the payment.</p>
+
+                    <p class="mb-4">Once we receive the funds, or if something goes wrong, we'll send a message to the callback URL you specified. As soon as your user's payment has enough block confirmations we will immediately forward the funds to the address you specified in your request and send a message to the callback URL you provided with the transaction hash containing your funds (minus the network transaction fee of 0.10 ZUM).</p>
+                    <p>The documentation regarding the information supplied in the callbacks is available in the <a href="https://docs.zumpay.io/api/">Public API Interface</a> documentation.</p>
+                </div>
+            </div>
+            
+            <div class="flex justify-center mb-16">
+                <div class="w-5/6 md:w-3/5 ">
+                    <h1 class="font-normal text-center mb-6">Show Your Support!</h1>
+                    <div class="w-full text-left">
+                        <p class="text-center"><a href="https://zumpay.io"><img src="https://badge.zumpay.io/" alt="Powered by ZumPay™" /></a></p>
+                        <br />
+                        <p>Adding a Powered by ZumPay™ badge to your site is an excellent way to show support for the project and let people know your ZumCoin payments use ZumPay™. Copy the following code in to your site to add a quick and easy badge.</p>
+                        <br />
+                        <code>&lt;a href="https://zumpay.io"&gt;
+  &lt;img src="https://badge.zumpay.io/" alt="Powered by ZumPay" /&gt;
+&lt;/a&gt;</code>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-16">
+                <div class="w-5/6 md:w-3/5 ">
+                    <h1 class="font-normal text-center mb-6">For More Information</h1>
+                    <div class="w-full text-left">
+                        <p>Check out our <a href="https://github.com/ZumPay-io" class="text-blue-dark">GitHub Organization</a> or check out the <a href="https://docs.zumpay.io/api" class="text-blue-dark">API documentation</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <div class="flex justify-center">
+                <div class="w-4/5 text-center pb-2 text-sm">
+                    <a href="https://github.com/ZumPay-io" target="_blank"><i class="fab fa-github fa-3x mx-4 text-grey-darker"></i></a>
+                    <a href="https://facebook.com/ZumPay" target="_blank"><i class="fab fa-facebook fa-3x mx-4 text-grey-darker"></i></a> 
+                    <a href="https://twitter.com/ZumPay" target="_blank"><i class="fab fa-twitter fa-3x mx-4 text-grey-darker"></i></a>
+                    <br /><br />
+                    Copyright © 2019 ZumPay™ Development Team. The source code is licensed under AGPL-3.0.
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
+<style>
+    body{
+        background-image: url(./img/pagebg.jpg);
+    }
+
+code {
+    text-align: left;
+    background-color: rgba(172, 173, 177, 0.363);
+    border: 1px solid #00853d;
+    display: block;
+    padding: 5px;
+    white-space: pre;
+    word-wrap: break-word;
+    overflow-x: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+</style>
